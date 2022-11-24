@@ -16,7 +16,7 @@
     "image": replicate:pollinations/lemonade-preset
     "input": {
         "image": [base64 encoded image],
-        "styles": "archer",  // archer, modern disney, arcane work well. we will tweak these more
+        "styles": "archer",  // archer, modern disney, arcane work well atm.
         "num_images_per_style": 1,
         "ethnicity": "",
         "gender": ""
