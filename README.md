@@ -57,4 +57,6 @@ Notes:
 
 Consult the file [test.html](test.html) for example usage. 
 
+Run directly in the browser: [https://htmlpreview.github.io/?https://github.com/pollinations/lemonade-public/blob/main/test.html](https://htmlpreview.github.io/?https://github.com/pollinations/lemonade-public/blob/main/test.html)
+
 The authentication token can be set in the console with `localStorage.token = "[tokeny]"` or supplied via the form.
