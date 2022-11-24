@@ -54,6 +54,7 @@ Notes:
 }
 ```
 
+## Sample Code
 
 Consult the file [test.html](test.html) for example usage. 
 
