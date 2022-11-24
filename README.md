@@ -24,7 +24,9 @@
 }
 ```
 
-Note: *Ethnicity and gender will be inferred from the input image if not provided*
+Notes:
+- The image is expected to be square with mostly the face of the person visible
+- Ethnicity and gender will be inferred from the input image if not provided
 
 **API Response format:**
 ```
