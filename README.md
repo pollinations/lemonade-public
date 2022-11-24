@@ -1,4 +1,4 @@
-# lemonade public
+# Lemonade API
 
 
 **Endpoint:** https://rest.pollinations.ai/pollen
