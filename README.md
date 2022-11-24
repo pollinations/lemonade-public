@@ -10,7 +10,7 @@
 **Authorization**: token passed via `Authorization: Bearer [token]` header
 
 
-**expected JSON structure for POST request:**
+**Expected JSON structure for POST request:**
 ```
 {
     "image": replicate:pollinations/lemonade-preset
@@ -18,9 +18,38 @@
         "image": [base64 encoded image],
         "styles": "styles",
         "num_images_per_style": "num_images_per_style"
+        "ethnicity": "",
+        "gender": ""
     }
 }
 ```
+
+Note: *Ethnicity and gender will be inferred from the input image if not provided*
+
+**API Response format:**
+```
+{
+    "input": { [provided inputs] },
+    "output": {
+        "avatars": ['https://replicate.delivery/pbxt/rQVeFloN3KRNeUbz44aIPlRZCfJdHZoa2cceDOvOsySXieZAC/avatar_0.png', ...],
+        "answers": {
+            "hairstyle": "long", 
+            "hair_color": "gray", 
+            "ethnicity": "asian", 
+            "hat": "none", 
+            "beard": "none", 
+            "moustache": "none", 
+            "age": "30", 
+            "skin_type": "asian", 
+            "skin_color": "white", 
+            "glasses": "none", 
+            "gender": "female"
+        },
+        "prompt": [prompt created for image generation (only needed for debugging)]
+    }
+}
+```
+
 
 Consult the file [test.html](test.html) for example usage. 
 
