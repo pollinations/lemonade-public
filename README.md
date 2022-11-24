@@ -2,9 +2,13 @@
 
 
 endpoint: https://rest.pollinations.ai/pollen
+
 method: POST
+
 expected content type: json
+
 authorization token passed via `Authorization: Bearer [token]` header
+
 
 expected JSON structure for POST request:
 ```
