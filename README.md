@@ -16,8 +16,8 @@
     "image": replicate:pollinations/lemonade-preset
     "input": {
         "image": [base64 encoded image],
-        "styles": "styles",
-        "num_images_per_style": "num_images_per_style"
+        "styles": "archer,modern disney",
+        "num_images_per_style": 1,
         "ethnicity": "",
         "gender": ""
     }
