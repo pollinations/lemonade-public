@@ -1,16 +1,16 @@
 # lemonade public
 
 
-endpoint: https://rest.pollinations.ai/pollen
+**endpoint:** https://rest.pollinations.ai/pollen
 
-method: POST
+**method:** POST
 
-expected content type: json
+**expected content type:** json
 
-authorization token passed via `Authorization: Bearer [token]` header
+**authorization**: token passed via `Authorization: Bearer [token]` header
 
 
-expected JSON structure for POST request:
+**expected JSON structure for POST request:**
 ```
 {
     "image": replicate:pollinations/lemonade-preset
