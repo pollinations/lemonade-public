@@ -1,13 +1,13 @@
 # lemonade public
 
 
-**endpoint:** https://rest.pollinations.ai/pollen
+**Endpoint:** https://rest.pollinations.ai/pollen
 
-**method:** POST
+**Request Method:** POST
 
 **Content-Type:** json
 
-**authorization**: token passed via `Authorization: Bearer [token]` header
+**Authorization**: token passed via `Authorization: Bearer [token]` header
 
 
 **expected JSON structure for POST request:**
@@ -22,4 +22,6 @@
 }
 ```
 
-consult the file [test.html](test.html) for example usage
+Consult the file [test.html](test.html) for example usage. 
+
+The authentication token can be set in the console with `localStorage.token = "[tokeny]"` or supplied via the form.
