@@ -5,7 +5,7 @@
 
 **method:** POST
 
-**expected content type:** json
+**Content-Type:** json
 
 **authorization**: token passed via `Authorization: Bearer [token]` header
 
