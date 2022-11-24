@@ -16,7 +16,7 @@
     "image": replicate:pollinations/lemonade-preset
     "input": {
         "image": [base64 encoded image],
-        "styles": "archer,modern disney",
+        "styles": "archer",  // archer, modern disney, arcane work well. we will tweak these more
         "num_images_per_style": 1,
         "ethnicity": "",
         "gender": ""
@@ -27,6 +27,8 @@
 Notes:
 - The image is expected to be square with mostly the face of the person visible
 - Ethnicity and gender will be inferred from the input image if not provided
+- If you want to 
+- After a period without use, the GPU instances the run the AI models are scaled down to zero. If you send the first request it could take a few minutes to return the first results but should then be responsive (20 seconds per request)
 
 **API Response format:**
 ```
