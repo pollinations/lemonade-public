@@ -18,6 +18,7 @@
         "image": [base64 encoded image],
         "styles": "archer",  // archer, modern disney, arcane work well atm.
         "num_images_per_style": 1,
+        "strength": 0.6, // how much to change the image
         "ethnicity": "",
         "gender": ""
     }
@@ -27,7 +28,7 @@
 Notes:
 - The image is expected to be square with mostly the face of the person visible
 - Ethnicity and gender will be inferred from the input image if not provided
-- After a period without use, the GPU instances the run the AI models are scaled down to zero. If you send the first request it could take a few minutes to return the first results but should then be responsive (20 seconds per request)
+- After a period without use, the AI model instances are scaled down to zero. If you send the first request it could take a few minutes to return the first results but should then be responsive (20 seconds per request)
 
 **API Response format:**
 ```
