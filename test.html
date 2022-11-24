@@ -78,20 +78,26 @@
             });
             const data = await response.json();
             console.log(data)
-            const avatarImageURLs = data?.output?.avatars;
 
-            console.log(avatarImageURLs);
+            // parse images
+            const avatarImageURLs = data?.output?.avatars;
 
             const results = document.querySelector('#results');
             results.innerHTML = '';
             avatarImageURLs.forEach((avatarImageURL) => {
                 const img = document.createElement('img');
                 img.src = avatarImageURL;
+                img.width = img.height = 256;
                 results.appendChild(img);
             });            
 
+            // parse features
             const featuresJSON = JSON.parse(data?.output?.answers);
-            const featuresString = Object.entries(featuresJSON).map(([key, value]) => `<b>${key}:</b> ${value}`).join('<br/>');
+            const featuresString = 
+                Object.entries(featuresJSON)
+                    .map(([key, value]) => `<b>${key}:</b> ${value}`)
+                    .join('<br/>');
+
             const answers = document.querySelector('#answers');
             answers.innerHTML = featuresString;
 
