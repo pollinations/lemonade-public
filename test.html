@@ -19,6 +19,8 @@
         styles (separated by comma) <input type="text" name="styles" id="styles" placeholder="styles" value="archer,modern disney"><br/>
         num images per style <input type="text" name="num_images_per_style" id="num_images_per_style" placeholder="num_images_per_style" value="1"><br/>
         effect strength <input type="text" name="strength" id="strength" placeholder="strength" value="0.7"><br/>
+        override gender <input type="text" name="gender" id="gender" placeholder="gender" value=""><br/>
+        override ethnicity <input type="text" name="ethnicity" id="ethnicity" placeholder="ethnicity" value=""><br/>
         api token <input type="text" name="token" id="token" placeholder="token"><br/>
         <br />
         <input type="submit" value="Submit" name="submit"><br/>
@@ -73,7 +75,8 @@
             const styles = document.querySelector('#styles').value;
             const num_images_per_style = document.querySelector('#num_images_per_style').value;
             const strength = document.querySelector('#strength').value;
-            const formData = new FormData();
+            const gender = document.querySelector('#gender').value;
+            const ethnicity = document.querySelector('#ethnicity').value;
 
             const body = {
                 "image": "replicate:pollinations/lemonade-preset",
@@ -81,7 +84,9 @@
                     "image": await toBase64(image),
                     "styles": styles,
                     "num_images_per_style": num_images_per_style,
-                    "strength": strength
+                    "strength": strength,
+                    "gender": gender,
+                    "ethnicity": ethnicity
                 }
             }
 
