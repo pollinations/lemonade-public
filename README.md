@@ -54,6 +54,41 @@ Notes:
 }
 ```
 
+## Websocket Endpoint
+
+```
+import WebSocket from 'ws';
+
+const ws = new WebSocket(endpoint_url);
+
+ws.on('open', function open() {
+    console.log('connected');
+
+    const request = {
+        "image":"replicate:pollinations/lemonade-preset",
+        "input": {
+            "image":"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAIAAACQkWg2AAADIElEQVR4nAAQA+/8Ame7A9yY2g+Vat11/fVkl/NS7O+k9bd6KYtDMjzG5q4OnBOoZ1cyhuLEuHEABjpwqAN58wwf5APC2lNtD301Jj0qCFuIdcgNroK9MqajHOikCmCEeL+ggZbzJfXAJ0O2IdME7OMTRo5dCSzzEXlGssNdE1SKDUQGw9rFzK8IuOFo+KoxYkSM2hMoVpW04+QYDaFqARgsty0fuhnxDM/ZHbDf2i4lKn05n8WgsIXFM8r5lQgmpwojLLdIIBE+ye2yro64AgE/yvxdQKQmUDJwJ7xu4UI8WjtK+a6Xtgtr+hiW/Fc1IsRHdB6qJioHmg/703HZFBAA49Eh3Twxw57s9bPz0zypGT8MJv4vwS/fwIO3zLkT7z82a4t2DLzB4JGtPLsqtMxkABXYhXtOBzYWVSeCZB3WYAWMtprZC/PvHK3695gT9bpfXxXbVep2Fd5Pq/XpPGLIQwPdzeTlNeQpIdX9G8n2clX3fYtfGkIKrJDXSZzkvgNWA3ml4EPrbGM74dWZpp294/AAz2+ovG4GH4vux27yqOaoXlYq7Q23zAjF3aSVAuIMBqPB5GZgKWA4z7AwDM8GvlMUAw/1HXM8d3GK2BFBJF15+ub9xIRBVxDgBAkEGjviL5srqPIOSC/0jgcl3bBr03+t9QSr0jgd9boULC2zqbiQZK3iD2rVS5g9qeiYJHNLxMfu/HyM2FpOYQPpSQQKpxXMgNwDcd3rYD8pXLaN7JEvNOnjqTqgMs4tCn4R/1tzQqqjdb2fjynR8QgYMFMTI9vhfxBxAP67w2Qv6vbp8PiD5U2thVpzJoqhEiBKD5nM8r9AF1A2Emnz6KMF9cTyYquW2MwMyQG37bJXmvEm76J9ugKPZ22uOf7s8txD3v3KyrKR+FhBxtVYI7VpE5Xy3cD6epykeJgBD6QD1qRjCzbYyX+O7GU9z4r/A1KzzEPF7/lAeRVNuDDY9BxYLtb7PyPy1qDmJBTOAqbNcU6FXe557yzH+vJUa8TeDxITr3cj3Swfzt2BfQcNPd5VJbUdXgRwb/cwQkVxTgEAAP//AimEcorlYhUAAAAASUVORK5CYII=",
+            "styles":"archer",
+            "gender":"",
+            "ethnicity":""
+        }
+    }
+    ws.send(JSON.stringify(request))
+
+})
+
+ws.on('message', function incoming(data) {
+
+    // convert data from buffer to string
+    const str = new TextDecoder("utf-8").decode(data);
+    const json = JSON.parse(str);
+    const {output, status } = json;
+    console.log(output, status);
+})
+
+```
+
+
 ## Sample Code
 
 Consult the file [test.html](test.html) for example usage. 
